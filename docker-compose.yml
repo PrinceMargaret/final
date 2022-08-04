@@ -1,16 +1,10 @@
 version: '3.5'
 services:
   frontend:
-        build: 
-            context: .
-            dockerfile: Dockerfile.dev
-        command: npm run start
-        image: frontend
-        ports:
-            - "3000:3000"        
-        volumes: 
-            - ./:/frontend
-            - /frontend/node_modules
+    image: princemargaret/frontend
+    ports:
+      - "3000:3000"
+        
   
 
   authentication:

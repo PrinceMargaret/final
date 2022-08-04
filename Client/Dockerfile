@@ -1,12 +1,7 @@
-FROM node:14.9.0 AS build-step
-
-WORKDIR /build
-COPY package.json package-lock.json ./
+FROM node:18
+WORKDIR /app
+COPY package.json ./
 RUN npm install
-
-COPY . .
-RUN npm run build
-
-FROM nginx:1.18-alpine
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=build-step /build/build /frontend/build
+COPY . ./
+CMD ["npm", "start"]
+EXPOSE 3000
