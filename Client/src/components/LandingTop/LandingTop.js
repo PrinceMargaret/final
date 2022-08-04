@@ -68,12 +68,12 @@ export default function LandingTop() {
         }
         {user && <div className="optionsHidden" id="options">
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">
+            {/* <li className="list-group-item">
               Settings <i className=" optionsIcons fa-solid fa-gear"></i>
             </li>
             <li className="list-group-item">
               Profile <i className=" optionsIcons  fa-solid fa-user"></i>
-            </li>
+            </li> */}
 
             <li className="list-group-item " onClick={handleClick}>
               Log Out

@@ -33,8 +33,9 @@
 .options{
     text-align: left;
     width: 120px;
-    height: 100px;
+    height: 50px;
     color: rgb(118, 117, 117);
+    opacity: 0.6;
     position: absolute;
     background-color: rgb(39, 38, 38);
     border-radius: 5px;
