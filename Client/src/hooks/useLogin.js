@@ -2,6 +2,9 @@ import { useState } from 'react'
 import {useNavigate} from "react-router-dom"
 import { useAuthContext } from './useAuthContext'
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export const useLogin = () => {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(null)
@@ -22,7 +25,8 @@ export const useLogin = () => {
     if (!response.ok) {
       setIsLoading(false)
       setError(json.error)
-      window.alert("Login falied")
+      /* window.alert("Login falied") */
+      toastFailureLogin()
       
       document
         .getElementById("LoginAlertFailed")
@@ -62,10 +66,32 @@ export const useLogin = () => {
       document
         .getElementById("LoginAlertFailed")
         .classList.remove("loginFailedalertdisplay");
-
+        toastSuccessLogin()
       navigate("/")
     }
   }
+
+  const toastFailureLogin = () =>
+    toast.error("You are not authorized. Please check your email and password.", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+    const toastSuccessLogin = () =>
+    toast.error("You are not authorized. Please check your email and password.", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
   return { login, isLoading, error }
 }

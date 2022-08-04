@@ -156,19 +156,20 @@ export default function Login() {
     });
 
     const data = await res.json();
-    if (data.status === 409) {
+   /*  if (data.status === 409) {
       window.alert("User already exists");
     } else if (data.status === 200) {
       window.alert("User registered successfully");
     } else {
       window.alert("Registration failed");
-    }
+    } */
   };
 
   const UserLogin = async (e) => {
     const { email, password } = loginUser;
     await login(email, password);
 
+  
     // const { email, password } = loginUser;
 
     // const res = await fetch(config.apiLoginUrl, {
@@ -223,6 +224,7 @@ export default function Login() {
     // }
   };
 
+
   const signUpButton = () => {
     document.getElementById("container").classList.add("sign-up-mode");
 
@@ -239,6 +241,8 @@ export default function Login() {
     document.getElementById("signin").classList.add("signin-signup");
 
     document.getElementById("panel").classList.add("right-panel2");
+
+    difftoast();
   };
 
   const difftoast = (responseMsg) => {
@@ -263,13 +267,14 @@ export default function Login() {
         {/* LOGIN FORM */}
 
         <div className="signin-signup" id="signin">
+          <ToastContainer/>
           <form method="POST" className="sign-in-form">
             <h2 className="title">Sign In</h2>
 
             <div className="loginFailedalert" id="LoginAlertFailed">
-              <Alert severity="error">
+              {/* <Alert severity="error">
                 You are not authorized. Please check your email and password.
-              </Alert>
+              </Alert> */}
             </div>
 
             <div className="loginSuccessalert" id="LoginAlertSuccess">
@@ -342,6 +347,7 @@ export default function Login() {
         {/* SIGN UP FORM */}
 
         <div className="signup-signup" id="signup">
+          <ToastContainer/>
           <form
             method="post"
             className="sign-up-form"
