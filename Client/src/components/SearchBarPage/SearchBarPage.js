@@ -9,6 +9,10 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 
 
+import { toast, ToastContainer } from 'react-toastify';
+import {useAuthContext} from "../../hooks/useAuthContext"
+
+
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -76,6 +80,21 @@ export default function SearchBarPage() {
         console.log(data);
 
         document.getElementById(heart).classList.add("fa-solid");
+      });
+
+      difftoast();
+  }
+
+  const difftoast = () => {
+    
+    toast.success('Song Added to Liked Songs', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
       });
   }
 
@@ -206,6 +225,7 @@ export default function SearchBarPage() {
           </div>
         ))} 
       </div>*/}
+      <ToastContainer/>
     </div>
   );
 }
