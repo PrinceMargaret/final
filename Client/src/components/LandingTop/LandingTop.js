@@ -35,6 +35,7 @@ export default function LandingTop() {
 
   const handleClick = ()=>{
     logout();
+    /* navigate('/') */
   }
 
   let navigate = useNavigate();

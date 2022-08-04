@@ -23,6 +23,7 @@ function App() {
           />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Home />} />
           <Route path="/:playlist" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/liked" element={<LikedSongs />} />

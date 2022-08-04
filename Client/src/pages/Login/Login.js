@@ -330,7 +330,7 @@ export default function Login() {
               {/* <a href="/auth/google" className="social-icon"> */}
               <form action="http://localhost:5000/auth/google" method="get">
                 {/* <i className="social-icon fab fa-google"></i> */}
-                <button type="submit" class="login-with-google-btn">
+                <button type="submit" className="login-with-google-btn">
                   Sign in with Google
                 </button>
               </form>
