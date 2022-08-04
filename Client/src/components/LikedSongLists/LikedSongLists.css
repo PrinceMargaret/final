@@ -1,0 +1,52 @@
+.LikedSongCards{
+    background-color: #130f40;
+    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    height: 93.2vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: nowrap;
+}
+.LikedSongCards::-webkit-scrollbar{
+    display: none;
+}
+
+.LikedSongHead{
+    background-color: #000000;
+    background-image: linear-gradient(140deg, #000000 0%, #2c3e50 74%); 
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.playlistImg{
+    width: 25%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
+}
+
+.LikedName{
+    color: aliceblue;
+    margin-left: 15px;
+}
+
+.liked-songs-lists{
+    display: grid;
+    grid-template-columns: 100% 20%;
+    margin-bottom: 2px;
+    margin-left: 15px;
+    cursor: pointer;
+    
+}
+
+@media only screen and (max-width: 750px) {
+    .LikedSongCards{
+        background-color: #130f40;
+        background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+        height: 87.3vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        white-space: nowrap;
+    }
+  }

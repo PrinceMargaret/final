@@ -1,0 +1,30 @@
+.NavbarTop{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-left: 15px;
+
+}
+.NavIcon{
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+.navTop-icon{
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+Link{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+    .NavbarTop{
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+        justify-content: space-around;
+  }
+
+}

@@ -1,0 +1,12 @@
+.LikedSongs{
+    position: relative;
+    display: grid;
+    grid-template-columns: 19% 81%; 
+}
+
+@media screen and (max-width: 750px) {
+    .LikedSongs {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }

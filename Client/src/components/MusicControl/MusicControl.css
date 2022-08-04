@@ -1,0 +1,10 @@
+.MusicControl{
+    position: absolute;
+    width: 85%;
+    display: grid;
+    grid-template-columns: auto auto 300px;
+    
+}
+.MusicAlbumDiv{
+    float: left;
+}

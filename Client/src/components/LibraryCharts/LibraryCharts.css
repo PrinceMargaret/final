@@ -1,0 +1,46 @@
+.likedPlaylistLibray{
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.likedPlaylistLibray>h3{
+    color: white;
+    padding-top: 170px;
+    font-size: 25px;
+    padding-left: 15px;
+}
+
+.likedPlaylistLibrayPlaylist{
+    background-color: #42378f;
+background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.likedPlaylistLibrayPlaylist>h3{
+    
+    color: white;
+    padding-top: 170px;
+    font-size: 25px;
+    padding-left: 15px;
+}
+
+.LibraryCreatePlaylist{
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    .PlaylistContainer{
+        justify-content: center;
+    }
+    .LibraryCreatePlaylist{
+        display: block;
+    }    
+  }

@@ -1,0 +1,8 @@
+@media screen and (max-width: 750px) {
+    .LandingPage {
+      position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+    }
+  }

@@ -1,0 +1,19 @@
+.SongContent{
+    background-color: #130f40;
+    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    height: 92.5vh;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: nowrap;
+}
+.SongContent::-webkit-scrollbar{
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    .SongContent{
+        height: 100vh;
+        margin-bottom: 0;
+  }
+}

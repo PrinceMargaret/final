@@ -1,0 +1,64 @@
+.NavbarBottom{
+    color: rgb(192, 188, 188);
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.NavIcon:hover{
+  color:white;
+}
+.NavIcon{
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;   
+}
+.NavIcon>h4{
+  cursor: pointer;
+}
+
+.LastLine{
+    border: 0.2px solid white;
+    width: 80%;
+    margin-left: 18px;
+    margin-top: 15px;
+}
+.fa-hart{
+  background: -webkit-linear-gradient(rgb(237, 137, 137), rgb(240, 37, 37));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.fa-square-plus{
+    background: -webkit-linear-gradient(rgb(202, 137, 237), rgb(55, 6, 234));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .Playlists{
+    margin-top: 15px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .playlist-list{
+    margin-bottom: 5px;
+  }
+
+  .playlist-list:hover{
+    color: rgb(31, 61, 79);
+    cursor: pointer;
+  }
+
+  #delete{
+    color: rgb(216, 9, 9);
+    cursor: pointer;
+    float: right;
+  }
+  
+
+  @media screen and (max-width: 750px) {
+    .NavbarBottom {
+    display: none;
+  }
+}
+
+

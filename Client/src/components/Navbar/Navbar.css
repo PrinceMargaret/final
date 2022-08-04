@@ -1,0 +1,14 @@
+.Navbar{    
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+    .Navbar{
+        height: auto;
+        background-color: #0cbaba;
+background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+
+  }
+}

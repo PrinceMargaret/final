@@ -1,0 +1,11 @@
+.MusicAlbumImg{
+  width: 100px;
+}
+.MusicAlbum{
+    display: flex;
+    flex-direction: row;
+}
+
+.artistName-MusicFooter{
+    font-size: 12px;
+}

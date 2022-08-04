@@ -1,0 +1,15 @@
+.VolumeControl{
+    position: absolute;
+    float: right;
+    margin-left: -12%;
+    padding-left: 0;
+    width: 300px;
+    
+}
+
+.soundVol{
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+    justify-content: center;
+}

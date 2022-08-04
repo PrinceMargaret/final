@@ -1,0 +1,69 @@
+.SongComponentHeading{
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+}
+.Sub-SliderComponent{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    
+}
+
+.Sub-SliderComponent::-webkit-scrollbar {
+    display: none;
+  }
+
+.SliderComponent_2_card{
+    margin: 10px;
+    display: inline-block;
+    width: 320px;
+
+}
+
+.cardComponent{
+    display: flex;
+    flex-direction: row;
+}
+
+.playBtn>i{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 35px;
+    color: green;
+}
+
+
+#image{
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    height: 250px;
+    
+    
+}
+
+.slider-component2_heart{
+    font-size: 20px;
+    position: relative;
+    float: right;
+    right: 10px;
+    bottom: 10px;
+    margin-left: 15px ;
+    color: rgb(118, 116, 116);
+}
+
+#heart{
+    color: white;
+}
+
+#plus{
+    color: rgb(27, 236, 27);
+    text-overflow: initial;
+       
+}
+:hover #plus{
+    title: "Add to playlist";
+       
+}
+
