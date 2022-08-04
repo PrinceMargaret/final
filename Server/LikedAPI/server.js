@@ -43,7 +43,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use("/api", require('./routes/likedSongRoutes'));
 
-let port = process.env.PORT || 7000;
+let port = process.env.PORT || 6000;
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 }
