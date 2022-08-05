@@ -9,8 +9,8 @@ const MongoDBStore = require("connect-mongodb-session")(session);
 const passport = require("passport");
 const routes = require("./Routes/UserRoutes");
 const UserModel = require("./Model/UserModel");
-const { PassportAuth } = require("./Auth/auth");
-const DB_URI = "mongodb+srv://PrinceMargaret:whZqC2szDBhh5hGu@prince-cluster.pocnu.mongodb.net/AuthDB";
+// const { PassportAuth } = require("./Auth/auth");
+const DB_URI = "mongodb://127.0.0.1:27017/AuthDB";
 const cors = require("cors");
 const cookieParser = require('cookie-parser')
 
@@ -84,7 +84,7 @@ passport.deserializeUser(function (id, done){
     });
 });
 
-passport.use(PassportAuth());
+// passport.use(PassportAuth());
 
 
 

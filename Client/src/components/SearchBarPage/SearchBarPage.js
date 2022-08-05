@@ -29,6 +29,7 @@ import AddToPlaylistModal from "../AddToPlaylistModal/AddToPlaylistModal";
 import { useState } from "react";
 
 export default function SearchBarPage() {
+  const {user} = useAuthContext()
   const [opened, setOpened] = useState(false);
   const [heart, setHeart] = useState(
     "slider-component2_heart fa-regular fa-heart float-end text-end"
@@ -66,7 +67,8 @@ export default function SearchBarPage() {
   }, [SongName]);
 
   function addLikedSong(track) {
-    fetch("https://likedapi.herokuapp.com/api/addLikedSong", {
+    if(user){
+      fetch("https://likedapi.herokuapp.com/api/addLikedSong", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -83,6 +85,18 @@ export default function SearchBarPage() {
       });
 
       difftoast();
+    }
+    if(!user){
+      toast.error('Please Log In', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });
+    }
   }
 
   const difftoast = () => {
@@ -159,12 +173,12 @@ export default function SearchBarPage() {
 
               />
               <p style={{ marginRight: "20px", marginTop: "15px"}}>{millisToMinutesAndSeconds(track.duration_ms)}</p>
-              <MoreHorizIcon sx={{ marginRight: "20px", marginTop: "15px" }} 
-              onClick={() => {
+              {user && <MoreHorizIcon sx={{ marginRight: "20px", marginTop: "15px" }} 
+              onClick={()=>{
                 setOpened(true);
                 setId(track.id);
               }}
-              />
+              />}
 
             </ListItem>
             <audio controls>

@@ -8,7 +8,7 @@ const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://PrinceMargaret:whZqC2szDBhh5hGu@prince-cluster.pocnu.mongodb.net/LikedSong?retryWrites=true&w=majority');
+mongoose.connect('mongodb://127.0.0.1:27017/LikedSongDB');
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB');
 }).on('error', (err) => {

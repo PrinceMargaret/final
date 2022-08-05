@@ -77,7 +77,7 @@ router.post("/register", RegisterUser);
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/UserSchema'/*
+ *               $ref: '#/components/schemas/UserSchema'
  *       500:
  *         description: Some server error
  */

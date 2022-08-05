@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { useNavigate } from 'react-router';
 import axios from "axios"
 import "./ResetPassword.css"
+import { toast } from "react-toastify";
 
 export default function ResetPassword(props) {
   // const [inputField, setInputField] = useState({
@@ -65,14 +66,41 @@ export default function ResetPassword(props) {
         const data = await res.data;
         console.log(data)
         if(data.success){
-          window.alert("Password updated successfully");
+          // window.alert("Password updated successfully");
+          toast.success("Password updated successfully", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
           naviagte("/login")
         }
         else{
-          window.alert("Incorrect Email");
+          // window.alert("Incorrect Email");
+          toast.error("Incorrect Email", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         }
       } catch (error) {
-        window.alert("Something went wrong");
+        // window.alert("Something went wrong");
+        toast.error("Something went wrong", {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       }
     }
 
